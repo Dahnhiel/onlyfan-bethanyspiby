@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>onlyfans/bethanyspiby</title>
+</head>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+
+	nav img {
+		/* height: 300px; */
+		width: 100%;
+		position: absolute;
+		z-index: 0;
+		margin-top: -170px;
+	}
+
+	.avater a img {
+		position: relative;
+		height: 100px;
+		width: 100px;
+		/* position: fixed; */
+		margin-top: -50px;
+		margin-left: 20px;
+		border-radius: 50%;
+		border: 2px solid white;
+		/* z-index: 1; */
+	}
+
+
+	nav h3 {
+		position: fixed;
+		margin-bottom: 0px;
+		color: whitesmoke;
+		margin-left: 50px;
+		font-size: 24px;
+		font-weight: 100;
+		margin-top: 10px;
+	}
+
+	.profile_name  {
+		position: absolute;
+		
+		/* margin-top: 100px; */
+		z-index: 5;
+	}
+
+	.profile_name.bio {
+		margin-top: 150px;
+		position: relative;
+	}
+
+	.profile_name {
+		display: flex;
+		flex-direction: column;
+		/* gap: 10; */
+		margin-top: 190px;
+		/* padding: 7px; */
+		/* height: auto; */
+		/* border-bottom: 1px solid wheat; */
+		background-color: white;
+		width: 100%;
+		height: 100vh;
+		/* border-bottom: 1px solid rgb(192, 185, 185); */
+		z-index: 0;
+		/* gap: ; */
+	}
+
+	.name {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 10px;
+		gap: 5px;
+	}
+
+	.name p {
+		color: rgb(192, 185, 185);
+	}
+
+	.mainsub {
+		/* position: ; */
+		margin-top: 20px;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		/* border-bottom: 1px solid rgb(192, 185, 185); */
+		border-top: 1px solid rgb(192, 185, 185);
+		width: 100%;
+		height: auto;
+		/* background-color: blue; */
+		padding: 5px;
+		gap: 10px;
+	}
+
+	button {
+		width: 90%;
+		height: 50px;
+		border-radius: 10px;
+		border: 1px solid black;
+		background-color: rgb(64, 64, 236);
+		color: white;
+		padding: 10px;
+	}
+
+	button div {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.id {
+		height: auto;
+		width: 100%;
+		border-bottom: 1px solid rgb(192, 185, 185);
+		padding: 10px;
+	}
+
+	nav p {
+		z-index: 3;
+		display: absolute;
+		color: white;
+	}
+
+	.animation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-color: white;
+		animation: boogle linear; 
+        animation-duration: .9s;
+		/* animation-delay: .20s; */
+		z-index: 3;
+    }
+
+    .img {
+        width: 100%;
+        /* margin-top: 30vh; */
+        /* transition: ease-out .1s; */
+    }
+
+    @keyframes boogle {
+        20% {
+            width: 100%;
+        }
+		40% {
+			width: 90%;
+		}
+
+		60% {
+			width: 100%;
+		}
+		80% {
+			width: 90%;
+		}
+		100% {
+			width: 100%;
+		}
+    }
+</style>
+
+<body>
+
+	<div class="animation">
+		<img src="Onlyfans-Logo.jpg" alt="" class="img">
+	   </div> 
+	
+	   <script>
+			// var animation = document.getElementsByClassName(".animation");
+			// let body = document.getElementsByClassName("container");
+
+			document.querySelector(".animation").addEventListener("animationend", () => {
+				document.querySelector(".animation").style.display = "none";
+				document.querySelector(".container").style.display = "block";
+			})
+
+			document.querySelector(".animation").addEventListener("animationstart", () => {
+				document.querySelector(".container").style.display = "none";
+			})
+
+			document.querySelector(".container").style.display = "none"
+	   </script>
+
+	<div class="container">
+		<header>
+			<nav>
+				<img src="header.jpg" alt="">
+				<h3>Bethany Spiby</h3>
+				<p>3,432 media     3,654 post</p>
+			</nav>
+		</header>
+		<div class="page">
+			<div class="profile_name">
+				<div class="avater">
+					<a href="header.jpg"><img src="header.jpg" alt=""></a>
+				</div>
+				<div class="id">
+					<div class="name">
+						<h2>Bethany Spiby</h2>
+						<p>@bethany_spiby . seen 10 minutes ago</p>
+					</div>
+					
+					<div class="collapsible">
+						<p class="bio">If you want an amazing time; you've come to the 
+							right page! I offer a tailored experience to you and your 
+							personal kinks! with private videos on request I can 
+							fulfill all your fetishes. I'm active in my DM's 
+							throughout the whole day so whether you want dirty talk,
+							sexting, casual chat or boyfriend like priviledges... 
+							I got you 10/10 reviews and loyal fans for 7 years. I have
+							3,500 explicit vids/pics to catch up on plus 3-5 daily upload!
+							Unzip your pants because we are going on a naughty ride.
+		
+		
+							Disclaimer. Please note that tax rates applicable in your 
+							country will apply to the monthly fee.
+						</p>
+					</div>
+
+					<div class="mainsub">
+						<label for="">SUSCRIPTION</label>
+						<a href="billing.html"><button><div><p>SUSCRIBE</p><p>$4.99 per month</p></div></button></a>
+					</div>
+
+					<div class="mainsub">
+						<label for="">SUSCRIPTION BUNDLE</label>
+						<a href="billing.html"><button><div><p>SUSCRIBE</p><p>$12.99 for 6 month</p></div></button></a>
+						<a href="billing.html"><button><div><p>SUSCRIBE</p><p>$22.99 per year</p></div></button></a>
+					
+			</div>
+		</div>
+	</div>
+</body>
+</html>

